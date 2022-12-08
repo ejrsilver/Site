@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>How to Help - Kingston Police Pipe Band</title>
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Hepta+Slab|Lobster|Rubik|Lato&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="script.js"></script>
+
+  </head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">HOME</a>
+    <a href="whoweare.html">WHO WE ARE</a>
+    <a href="whatwedo.html">WHAT WE DO</a>
+    <a href="getinvolved.html">GET INVOLVED</a>
+    <a href="howtohelp.html">HOW TO HELP</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+
+  <div id="main">
+    <div id="navbar">
+      <table>
+        <tr>
+          <th>
+            <a onclick="openNav()"><div id="menuicon"><img src="menu.png"></div></a>
+          </th>
+          <td>
+            <img src="logo.png">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="content">
+
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+      <div id="tableofcontents">
+        <h1>Jump to...</h1>
+        <table>
+          <tr>
+            <th><a href="#amnesty">Amnesty Program</a></th>
+            <th><a href="#partner">Community Partner</a></th>
+            <th><a href="#sponsor">Sponsorship</a></th>
+          </tr>
+        </table>
+      </div>
+
+      <div class="about">
+        <h1>How To Help</h1>
+
+        <h5>Friend of the Band</h5>
+        <ul>
+          <li>Gold Level Donor?</li>
+          <li>Silver Level Donor?</li>
+          <li>Bronze Level Donor?</li>
+        </ul>
+
+        <p>Would you like to become a friend? Contact us at <a href="mailto:info@kingstonpolicepipeband.com">info@kingstonpolicepipeband.com</a></p>
+
+        <a name="amnesty"></a>
+        <br>
+        <h5>Amnesty Program</h5>
+        <p>If your playing days are behind you or you know where we might find some bagpipes, drums, etc., we are always looking for instruments for our new players. We have skilled instructors who can give your old sets some TLC and they might be greatly loved by a future piper. All of our lessons are free, and we try to have equipment (including uniforms and instruments) to loan to anyone who needs it. Your donation could help a young person become a piper!
+        <br>
+        <br>
+        Pipes, Drums, Tenor Mallets…..
+        <br>
+        <br>
+        Do you have an instrument to donate? Contact us at <a href="mailto:info@kingstonpolicepipeband.com">info@kingstonpolicepipeband.com</a></p>
+
+        <a name="partner"></a>
+        <br>
+
+        <h5>Community Partner</h5>
+        <p>We are always looking for ways to be involved in the community, particularly with young people to help them start on their lifelong involvement in pipe and drum bands.
+        <br>
+        The Kingston Police Pipe Band currently has an active partnership with the Boys and Girls Club of Kingston. We share space with them for our practices, and band members volunteer in the after-school program providing pipe and drum lessons.
+        <br>
+        Do you have a partnership idea? contact us at <a href="mailto:info@kingstonpolicepipeband.com">info@kingstonpolicepipeband.com</a>.</p>
+
+        <a name="sponsor"></a>
+        <br>
+
+        <h5>Sponsorship</h5>
+
+        <p>The Kingston Police Pipe Band has physical sponsorship opportunities available. These include, but are by no means limited to:</p>
+
+        <dl>
+          <dt>Banner</dt>
+          <dd>We carry this in parades in the summer and winter</dd>
+          <dt>Tent</dt>
+          <dd>We pitch it at games to keep our instruments and players cool and dry</dd>
+          <dt>T-shirts</dt>
+          <dd>We use these for fundraisers and for team building, and for our own promotion, so hop on board!</dd>
+          <dt>Website</dt>
+          <dd>We can place logos or banner ads on any of our pages</dd>
+        </dl>
+        <p>Would you like to sponsor the band? Contact us at <a href="mailto:info@kingstonpolicepipeband.com">info@kingstonpolicepipeband.com</a></p>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+</body>
+</html>

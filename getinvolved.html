@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Get Involved - Kingston Police Pipe Band</title>
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Hepta+Slab|Lobster|Rubik|Lato&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="script.js"></script>
+
+  </head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">HOME</a>
+    <a href="whoweare.html">WHO WE ARE</a>
+    <a href="whatwedo.html">WHAT WE DO</a>
+    <a href="getinvolved.html">GET INVOLVED</a>
+    <a href="howtohelp.html">HOW TO HELP</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+
+  <div id="main">
+    <div id="navbar">
+      <table>
+        <tr>
+          <th>
+            <a onclick="openNav()"><div id="menuicon"><img src="menu.png"></div></a>
+          </th>
+          <td>
+            <img src="logo.png">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="content">
+
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+      <div id="tableofcontents">
+        <h1>Jump to...</h1>
+        <table>
+          <tr>
+            <th><a href="#lessons">Take Lessons</a></th>
+            <th><a href="#join">Join the Band</a></th>
+            <th><a href="#volunteer">Volunteer</a></th>
+          </tr>
+        </table>
+      </div>
+
+      <div class="about">
+        <h1>Get Involved</h1>
+
+        <a name="lessons"></a>
+        <h5>Take Lessons</h5>
+
+        <p>Classes are available for new beginners to advanced students starting at age 8 and up. All equipment provided. Click here to learn more. <a href="">[hyperlink to ‘learn to play’]</a>
+        Contact us at  <a href="mailto:kingstonpolicepipeband@gmail.com">kingstonpolicepipeband@gmail.com</a> to register.</p>
+
+        <a name="join"></a>
+        <h5>Join the band</h5>
+
+        <p>If you are a beginner, learn more here <a href="">[hyperlink to Learn to play]</a>.
+        If you have experience, come out to a practice on Sunday evening and introduce yourself.
+        <br>
+        <br>
+        Time: Sundays at 6:30pm to 8:30pm
+        <br>
+        Location: Robert Meek on Bagot st.
+        <br>
+        <br>
+        Contact Pipe Major John McKay at <a href="mailto:kingstonpolicepipeband@gmail.com">kingstonpolicepipeband@gmail.com</a> and let him know you are coming.</p>
+
+        <a name="volunteer"></a>
+        <h5>Volunteer</h5>
+
+        <p>Along with playing with band as a volunteer, we also have fundraising events and promotional events. We can use folks to do all kinds of jobs. Contact the band at <a href="mailto:kingstonpolicepipeband@gmail.com">kingstonpolicepipeband@gmail.com</a> to find out about current volunteer opportunities.</p>
+
+        <h4>Examples include:</h4>
+        <ul>
+        <li>Working booths for fundraising or promotional events</li>
+        <li>Bingo</li>
+        <li>Moving instruments</li>
+        <li>Carrying our banner in the parade</li>
+        <li>Setting up and take down</li>
+        <li>Anything you can think of</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+</body>
+</html>
