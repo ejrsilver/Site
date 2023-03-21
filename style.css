@@ -1,63 +1,8 @@
 body {
   margin: 0;
   font-size: 20px;
-  font-family: 'Rubik', sans-serif;
   background-attachment: fixed;
   background-position: center; 
-  transition: opacity .5s ease-in-out;
-}
-
-h6 {
-  font-size: 22px;
-}
-
-img{
-  width: 30pt;
-}
-
-#myBtn {
-  display: none;
-  position: fixed;
-  top: 15pt;
-  left: 15pt;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: rgb(103, 212, 59);
-  color: black;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-
-#myBtn:hover {
-  background-color: rgb(186, 255, 121);
-}
-
-.about a {
-  color:#F0494A;
-  text-decoration: none;
-}
-
-.about a:visited {
-  color:#7CB342;
-}
-
-.about, .interests, .things, {
-  width: 100%;
-}
-
-.content p, .content h3, .content h4, .content ul, .content h6, .content h1, .content dl {
-  margin-left: 5%;
-  margin-right: 5%;
-  padding-bottom: 7pt;
-  padding-top: 7pt;
-}
-
-.content h5 {
-  margin-left: 5%;
-  font-size: 25pt;
 }
 
 table {
@@ -65,58 +10,26 @@ table {
   width: 100%;
 }
 
-#tableofcontents th, #tableofcontents a, #tableofcontents a:visited {
-  font-size:15pt;
-  font-family: 'Hepta Slab', serif;
-  color: black;
-  text-decoration: none;
-  background-color: rgb(186, 255, 121);
-  margin:auto;
+.main {
+  padding-left: 40pt;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#tableofcontents {
-  background-color: rgb(103, 212, 59);
-  border:1pt solid lightgrey;
+@keyframes example {
+  from {opacity: 0; padding-left:0;}
+  to {opacity: 100%; padding-left: 40pt;}
 }
 
-#tableofcontents h1 {
-  font-size: 30pt;
-  padding: 5pt;
-  margin:0%;
-  font-family: 'Lobster', cursive;
+.main h1 {
+  font-size: 108pt;
+  animation-name: example;
+  animation-duration: 2s;
+  padding-left: 40pt;
 }
 
 #navbar {
   overflow: hidden;
   background-color: ghostwhite;
-}
-
-.intro {
-  padding: 50pt;
-  padding-top: 200pt;
-  font-family: 'Monserrat', sans-serif;
-  height: 100%;
-  background:rgba(0, 0, 0, 0.5);
-}
-
-#mainindex {
-  background-size: cover;
-  background-image: url(Background.jpg);
-  background-position: center;
-}
-
-.intro h4 {
-  margin-left: 30pt;
-  background-color: white;
-  padding: 5pt;
-  width: 50%;
-}
-
-.intro h6 {
-  width: fit-content;
-  padding: 5pt;
-  background-color: white;
-  margin-left: 30pt;
 }
 
 #navbar th {
@@ -129,53 +42,43 @@ table {
   transition: all .2s ease-in-out;
 }
 
-/* The side navigation menu */
 .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
-  background-color: rgb(77, 11, 11); /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
 }
 
-/* The navigation menu links */
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #b91b1b;
+  color: whitesmoke;
   display: block;
   transition: 0.3s;
-  font-family: 'Dosis', sans-serif;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: white;
 }
 
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
-  color: #b91b1b;
+  color: whitesmoke;
 }
 
-.about h1, h4, h5 {
-  font-family: 'Lato', sans-serif;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
+.sidenav .closebtn:hover {
+  color: white;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

@@ -5,7 +5,7 @@
     <link rel="icon" href="logo.png" type="image/png">
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="script.js"></script>
-    <title>Home - Ethan Silver</title>
+    <title>About - Ethan Silver</title>
   </head>
 
 <body>
