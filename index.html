@@ -4,8 +4,69 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="logo.png" type="image/png">
-    <link href="style.css" rel="stylesheet" type="text/css">
     <title>Home - Ethan Silver</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #444;
+            color: whitesmoke;
+        }
+
+        button {
+            background: none;
+            border: none;
+            color: whitesmoke;
+            font-size: 1em;
+            padding-inline: 2em;
+            padding: 0.5em;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        a:link {
+            color: lightblue;
+        }
+
+        a:hover {
+            color: skyblue;
+        }
+
+        a:visited {
+            color: lightgrey;
+        }
+
+        table {
+            text-align: center;
+            width: 100%;
+        }
+
+        .container {
+            padding-inline: 2em;
+        }
+
+        @media screen and (prefers-color-scheme: light) {
+            body {
+                color: #444;
+                background-color: whitesmoke;
+            }
+
+            a:link {
+                color: darkblue;
+            }
+
+            a:hover {
+                color: skyblue;
+            }
+
+            a:visited {
+                color: darkgrey;
+            }
+        }
+    </style>
     <script>
         /**
          * Render form content conditionally.
@@ -13,78 +74,101 @@
          * @param {number} val
          */
         function renderForm(val) {
+            console.log(val);
             const ele = document.getElementById("page-swappable-content");
+            ele.innerHTML = document.getElementById(val).outerHTML;
         }
     </script>
 </head>
 
 <body>
-    <center>
-        <picture>
-            <source srcset="dark-logo.png" media="(prefers-color-scheme: light)">
-            <img src="light-logo.png" style="padding: 20px; text-align: center;">
-        </picture>
-    </center>
+    <div style="display: flex; justify-content: space-between; background-color: #333; align-items: center;">
+        <button onclick="renderForm('default')" style="border: none;">
+            <picture style="max-width: 100px;">
+                <source srcset="dark-logo.png" media="(prefers-color-scheme: light)">
+                <img src="light-logo.png" style="max-width: 100px; ">
+            </picture>
+        </button>
+        <div>
+            <button style="height: 100%;" onclick="renderForm('skills')">My Skillset</button>
+            <button style="height: 100%;" onclick="renderForm('contact-me')">Contact</button>
+        </div>
+    </div>
     <div id="page-swappable-content"></div>
 
-    <h1>Hi There!</h1>
-    <p>My name is Ethan, and I'm a computer engineering student at Queen's University, and a Software Developer at the
-        Centre for Advanced Computing</p>
-    <p>I'm experienced with Next.js, including this <a href="https://dev.ejrsilver.com">accessible map application</a> I
-        created in Spring 2023.</p>
+    <div id="hidden-content" style="opacity: 0;">
+        <div id="default" class="container">
+            <h1>Hi There!</h1>
+            <p>My name is Ethan, and I'm a computer engineering student at Queen's University,
+                and a Software Developer at the Centre for Advanced Computing</p>
+            <p>I'm experienced with Next.js, including this <a href="https://dev.ejrsilver.com">accessible map
+                    application</a> I
+                created in Spring 2023.</p>
 
-    <p>While most of the work I do is in Web Development, the field I aim to work in professionally is embedded and
-        distributed systems.</p>
+            <p>While most of the work I do is in Web Development, the field I aim to work in professionally is embedded
+                and
+                distributed systems.</p>
+        </div>
 
-    <h2>Contact Me</h2>
-    <p><a href="https://github.com/ejrsilver">GitHub</a></p>
-    <p><a href="https://linkedin.com/in/ejrsilver">LinkedIn</a></p>
+        <div id="contact-me" class="container">
+            <h2>Contact Me</h2>
+            <p><a href="https://github.com/ejrsilver">GitHub</a></p>
+            <p><a href="https://linkedin.com/in/ejrsilver">LinkedIn</a></p>
+        </div>
 
-    <h2>My Skillset</h2>
-    <table>
-        <tbody>
-            <tr>
-                <th>Languages</th>
-                <th>Technologies</th>
-            </tr>
-            <tr>
-                <td>
-                    <ul style="list-style-type: none;">
-                        <li>C/C++</li>
-                        <li>RISC ASM</li>
-                        <li>x86-64 ASM</li>
-                        <li>Verilog/VHDL</li>
-                        <li>Pascal</li>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>JavaScript/TypeScript</li>
-                        <li>HTML/CSS</li>
-                        <li>PHP</li>
-                        <li>SQL</li>
-                        <li>Fortran</li>
-                        <li>Swift</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul style="list-style-type: none;">
-                        <li>React (React, Next.js, React Native)</li>
-                        <li>Django (Django REST Framework)</li>
-                        <li>Git (GitHub, GitLab, BitBucket)</li>
-                        <li>WxWidgets</li>
-                        <li>Swing API</li>
-                        <li>Flutter</li>
-                        <li>SwiftUI</li>
-                        <li>Intel Quartus</li>
-                        <li>Databases (MySQL, MongoDB, PostgreSQL)</li>
-                        <li>jQuery</li>
-                        <li>HTMX</li>
-                        <li>WordPress</li>
-                        <li>Docker</li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <div id="skills" class="container">
+            <h2>My Skillset</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Languages</th>
+                        <th>Technologies</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul style="list-style-type: none;">
+                                <li>C/C++</li>
+                                <li>RISC ASM</li>
+                                <li>x86-64 ASM</li>
+                                <li>Verilog/VHDL</li>
+                                <li>Pascal</li>
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>JavaScript/TypeScript</li>
+                                <li>HTML/CSS</li>
+                                <li>PHP</li>
+                                <li>SQL</li>
+                                <li>Fortran</li>
+                                <li>Swift</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul style="list-style-type: none;">
+                                <li>React (React, Next.js, React Native)</li>
+                                <li>Django (Django REST Framework)</li>
+                                <li>Git (GitHub, GitLab, BitBucket)</li>
+                                <li>WxWidgets</li>
+                                <li>Swing API</li>
+                                <li>Flutter</li>
+                                <li>SwiftUI</li>
+                                <li>Intel Quartus</li>
+                                <li>Databases (MySQL, MongoDB, PostgreSQL)</li>
+                                <li>jQuery</li>
+                                <li>HTMX</li>
+                                <li>WordPress</li>
+                                <li>Docker</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <script>
+            renderForm('default');
+        </script>
+    </footer>
 </body>
 
 </html>
