@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="icon" href="./logo.png" type="image/png">
     <title>Home - Ethan Silver</title>
     <style>
         body {
@@ -68,14 +68,32 @@
         }
     </style>
     <script>
+
         /**
          * Render form content conditionally.
          *
-         * @param {number} val
+         *
+         * @param {string} val
          */
+        const pages = {
+            "default": {
+                url: "/",
+                title: "Home"
+            },
+            "contact-me": {
+                url: "/contact",
+                title: "Contact Me"
+            },
+            "skills": {
+                url: "/skills",
+                title: "My Skills and Experience"
+            }
+        };
         function renderForm(val) {
             console.log(val);
             const ele = document.getElementById("page-swappable-content");
+            document.title = pages[val].title;
+            window.history.pushState(val, "", pages[val].url);
             ele.innerHTML = document.getElementById(val).outerHTML;
         }
     </script>
@@ -85,8 +103,8 @@
     <div style="display: flex; justify-content: space-between; background-color: #333; align-items: center;">
         <button onclick="renderForm('default')" style="border: none;">
             <picture style="max-width: 100px;">
-                <source srcset="dark-logo.png" media="(prefers-color-scheme: light)">
-                <img src="light-logo.png" style="max-width: 100px; ">
+                <source srcset="./dark-logo.png" media="(prefers-color-scheme: light)">
+                <img src="./light-logo.png" style="max-width: 100px; ">
             </picture>
         </button>
         <div>
@@ -166,7 +184,14 @@
     </div>
     <footer>
         <script>
-            renderForm('default');
+            console.log(window.location.pathname);
+            if (window.location.pathname === "contact") {
+                renderForm("contact");
+            } else if (window.location.pathname === "skills") {
+                renderForm("skills");
+            } else {
+                renderForm('default');
+            }
         </script>
     </footer>
 </body>
