@@ -1,0 +1,45 @@
+networks:
+  personal-site:
+
+volumes:
+  db_data:
+
+services:
+  db:
+    image: mysql
+    container_name: db
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+    - personal-site
+
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: site
+    user: 1000:1000
+    depends_on:
+      - db
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./:/var/www/html
+    restart: unless-stopped
+    environment:
+      DB_HOST: db:3306
+      DB_NAME: ${MYSQL_DATABASE}
+      DB_USER: ${MYSQL_USER}
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+      - personal-site
+
