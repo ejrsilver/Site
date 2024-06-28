@@ -4,196 +4,110 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" href="./static/logo.png" type="image/png">
+    <script src="./static/main.js"></script>
     <title>Home - Ethan Silver</title>
-    <style>
-        body {
-            margin: 0;
-            font-size: 18px;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #444;
-            color: whitesmoke;
-        }
-
-        button {
-            background: none;
-            border: none;
-            color: whitesmoke;
-            font-size: 1em;
-            padding-inline: 2em;
-            padding: 0.5em;
-        }
-
-        button:hover {
-            background-color: #555;
-        }
-
-        a:link {
-            color: lightblue;
-        }
-
-        a:hover {
-            color: skyblue;
-        }
-
-        a:visited {
-            color: lightgrey;
-        }
-
-        table {
-            text-align: center;
-            width: 100%;
-        }
-
-        .container {
-            padding-inline: 2em;
-        }
-
-        @media screen and (prefers-color-scheme: light) {
-            body {
-                color: #444;
-                background-color: whitesmoke;
-            }
-
-            a:link {
-                color: darkblue;
-            }
-
-            a:hover {
-                color: skyblue;
-            }
-
-            a:visited {
-                color: darkgrey;
-            }
-        }
-    </style>
-    <script>
-
-        /**
-         * Render form content conditionally.
-         *
-         *
-         * @param {string} val
-         */
-        const pages = {
-            "default": {
-                url: "/",
-                title: "Home"
-            },
-            "contact": {
-                url: "/contact",
-                title: "Contact Me"
-            },
-            "skills": {
-                url: "/skills",
-                title: "My Skills and Experience"
-            }
-        };
-        function renderForm(val) {
-            console.log(val);
-            const ele = document.getElementById("page-swappable-content");
-            document.title = pages[val].title;
-            window.history.pushState(val, "", pages[val].url);
-            ele.innerHTML = document.getElementById(val).outerHTML;
-        }
-    </script>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 
 <body>
-    <div style="display: flex; justify-content: space-between; background-color: #333; align-items: center;">
-        <button onclick="renderForm('default')" style="border: none;">
+    <div class="menu">
+        <button onclick="renderForm('default')" class="menuitem" style="border: none;">
             <picture style="max-width: 100px;">
                 <source srcset="./static/dark-logo.png" media="(prefers-color-scheme: light)">
                 <img src="./static/light-logo.png" style="max-width: 100px; ">
             </picture>
         </button>
-        <div>
-            <button style="height: 100%;" onclick="renderForm('skills')">My Skillset</button>
-            <button style="height: 100%;" onclick="renderForm('contact')">Contact</button>
+        <div style="display: flex; flex-direction: row;">
+            <button class="menuitem" onclick="renderForm('skills')">Tools and Languages</button>
+            <button class="menuitem" onclick="renderForm('projects')">Projects</button>
+            <a class="menuitem" href="https://github.com/ejrsilver"><img class="menuitem"
+                    src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white"
+                    alt="GitHub"></a>
+            <a class="menuitem" href="https://linkedin.com/in/ejrsilver"><img class="menuitem"
+                    src="https://img.shields.io/badge/linkedin-black?style=for-the-badge&logo=linkedin&logoColor=white"
+                    alt="LinkedIn"></a>
         </div>
     </div>
-    <div id="page-swappable-content"></div>
+    <div id="page-swappable-content">
+        <div class="container">
+            <h1>Hi There!</h1>
+            <p>My name is Ethan, and I'm a computer engineering student at Queen's University,
+                and a Software Developer at the Centre for Advanced Computing.</p>
+            <p>I work in web and application development, primarily as a backend engineer. I've worked in a variety of
+                languages for multiple platforms, and I'm comfortable working in a fast-paced environment. I also have
+                some experience in education and curriculum development working both in classrooms and online.</p>
+        </div>
+
+    </div>
 
     <div id="hidden-content" style="opacity: 0;">
         <div id="default" class="container">
             <h1>Hi There!</h1>
             <p>My name is Ethan, and I'm a computer engineering student at Queen's University,
-                and a Software Developer at the Centre for Advanced Computing</p>
-            <p>I'm experienced with Next.js, including this <a href="https://dev.ejrsilver.com">accessible map
-                    application</a> I
-                created in Spring 2023.</p>
-
-            <p>While most of the work I do is in Web Development, the field I aim to work in professionally is embedded
-                and
-                distributed systems.</p>
-        </div>
-
-        <div id="contact" class="container">
-            <h2>Contact Me</h2>
-            <p><a href="https://github.com/ejrsilver">GitHub</a></p>
-            <p><a href="https://linkedin.com/in/ejrsilver">LinkedIn</a></p>
+                and a Software Developer at the Centre for Advanced Computing.</p>
+            <p>I work in web and application development, primarily as a backend engineer. I've worked in a variety of
+                languages for multiple platforms, and I'm comfortable working in a fast-paced environment. I also have
+                some experience in education and curriculum development working both in classrooms and online.</p>
         </div>
 
         <div id="skills" class="container">
             <h2>My Skillset</h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Languages</th>
-                        <th>Technologies</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul style="list-style-type: none;">
-                                <li>C/C++</li>
-                                <li>RISC ASM</li>
-                                <li>x86-64 ASM</li>
-                                <li>Verilog/VHDL</li>
-                                <li>Pascal</li>
-                                <li>Java</li>
-                                <li>Python</li>
-                                <li>JavaScript/TypeScript</li>
-                                <li>HTML/CSS</li>
-                                <li>PHP</li>
-                                <li>SQL</li>
-                                <li>Fortran</li>
-                                <li>Swift</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul style="list-style-type: none;">
-                                <li>React (React, Next.js, React Native)</li>
-                                <li>Django (Django REST Framework)</li>
-                                <li>Git (GitHub, GitLab, BitBucket)</li>
-                                <li>WxWidgets</li>
-                                <li>Swing API</li>
-                                <li>Flutter</li>
-                                <li>SwiftUI</li>
-                                <li>Intel Quartus</li>
-                                <li>Databases (MySQL, MongoDB, PostgreSQL)</li>
-                                <li>jQuery</li>
-                                <li>HTMX</li>
-                                <li>WordPress</li>
-                                <li>Docker</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <h3>Languages</h3>
+
+            <p><img src="https://img.shields.io/badge/php-black?style=for-the-badge&logo=php" alt="PHP">
+                <img src="https://img.shields.io/badge/typescript-black?style=for-the-badge&logo=typescript"
+                    alt="TypeScript">
+                <img src="https://img.shields.io/badge/javascript-black?style=for-the-badge&logo=javascript"
+                    alt="JavaScript">
+                <img src="https://img.shields.io/badge/python-black?style=for-the-badge&logo=python" alt="Python">
+                <img src="https://img.shields.io/badge/sql-black?style=for-the-badge&logo=postgresql" alt="SQL">
+            </p>
+
+            <p><img src="https://img.shields.io/badge/C-black?style=for-the-badge&logo=c" alt="C">
+                <img src="https://img.shields.io/badge/C++-black?style=for-the-badge&logo=cplusplus" alt="C++">
+                <img src="https://img.shields.io/badge/rust-black?style=for-the-badge&logo=rust" alt="Rust">
+                <img src="https://img.shields.io/badge/Fortran-black?style=for-the-badge&logo=fortran" alt="Fortran">
+            </p>
+
+            <p><img src="https://img.shields.io/badge/Swift-black?style=for-the-badge&logo=swift" alt="Swift">
+                <img src="https://img.shields.io/badge/java-black?style=for-the-badge&logo=openjdk" alt="Java">
+                <img src="https://img.shields.io/badge/Dart-black?style=for-the-badge&logo=dart" alt="Dart">
+            </p>
+
+            <p><img src="https://img.shields.io/badge/Verilog-black?style=for-the-badge&logo=verilog" alt="Verilog">
+            </p>
+
+            <h3>Technologies</h3>
+
+            <p><img src="https://img.shields.io/badge/wordpress-black?style=for-the-badge&logo=wordpress"
+                    alt="WordPress">
+                <img src="https://img.shields.io/badge/django-black?style=for-the-badge&logo=django" alt="Django">
+                <img src="https://img.shields.io/badge/next.js-black?style=for-the-badge&logo=next.js" alt="NextJS">
+                <img src="https://img.shields.io/badge/react-black?style=for-the-badge&logo=react" alt="React">
+            </p>
+
+            <p><img src="https://img.shields.io/badge/React_Native-black?style=for-the-badge&logo=react" alt="React">
+                <img src="https://img.shields.io/badge/flutter-black?style=for-the-badge&logo=flutter" alt="Flutter">
+                <img src="https://img.shields.io/badge/SwiftUI-black?style=for-the-badge&logo=swift" alt="SwiftUI">
+            </p>
+
+            <p><img src="https://img.shields.io/badge/wxwidgets-black?style=for-the-badge&logo=wxwidgets"
+                    alt="WxWidgets">
+                <img src="https://img.shields.io/badge/swing-black?style=for-the-badge&logo=swing" alt="Swing">
+            </p>
         </div>
+
+        <div id="projects" class="container">
+            <h2>Projects</h2>
+            <p>I created this <a href="https://dev.ejrsilver.com">accessible map
+                    application</a> using Next.js in Summer 2023.</p>
+            <p>Also using Next.js (using Create-T3-App), I recently created this <a
+                    href="https://qscc.ejrsilver.com">online education platform</a> for the Queen's Supercomputing Team.
+            </p>
+            <p>There's more to see on my <a href="https://github.com/ejrsilver">GitHub</a>.</p>
+        </div>
+
     </div>
-    <footer>
-        <script>
-            console.log(window.location.pathname);
-            if (window.location.pathname === "/contact") {
-                renderForm("contact");
-            } else if (window.location.pathname === "/skills") {
-                renderForm("skills");
-            } else {
-                renderForm('default');
-            }
-        </script>
-    </footer>
 </body>
 
 </html>
