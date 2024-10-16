@@ -11,102 +11,48 @@
 
 <body>
     <div class="menu">
-        <button onclick="renderForm('default')" class="menuitem" style="border: none;">
-            <picture style="max-width: 100px;">
-                <source srcset="./static/dark-logo.png" media="(prefers-color-scheme: light)">
-                <img src="./static/light-logo.png" style="max-width: 100px; ">
-            </picture>
+        <button class="menuitem" onclick="renderForm('default')">
+            <svg viewBox="0 0 320 127.5" xmlns="http://www.w3.org/2000/svg" width="80">
+                <path
+                    d="m 175,0 c 0,20 0,40 0,60 16.66667,0 33.33333,0 50,0 0,6.666667 0,13.333333 0,20 5,0 10,0 15,0 0,-6.666667 0,-13.333333 0,-20 5,0 10,0 15,0 0,15 0,29.999999 0,45 5,0 10,0 15,0 0,-15.000001 0,-30 0,-45 11.66667,0 23.33333,0 35,0 0,15 0,29.999999 0,45 5,0 10,0 15,0 0,-20.000001 0,-40 0,-60 -16.66667,0 -33.33333,0 -50,0 0,-6.666016 0,-13.332031 0,-19.998047 -5,0 -10,0 -15,0 0,6.666016 0,13.332031 0,19.998047 -5,0 -10,0 -15,0 0,-15 0,-30 0,-45 -21.66667,0 -43.33333,0 -65,0 z M 0,12.5 c 0,38.333333 0,76.666669 0,115 33.333333,0 66.666667,0 100,0 0,-5 0,-10 0,-15 -28.333333,0 -56.666667,0 -85,0 0,-7.5 0,-15.000001 0,-22.500001 15,0 30,0 45,0 C 60,84.999999 60,80 60,75 c -15,0 -30,0 -45,0 0,-15.833333 0,-31.666667 0,-47.5 28.333333,0 56.666667,0 85,0 0,-5 0,-10 0,-15 -33.333333,0 -66.666667,0 -100,0 z m 115,0 c 0,20.833333 0,41.666667 0,62.5 -13.33333,0 -26.66667,0 -40,0 0,5 0,9.999999 0,14.999999 13.33333,0 26.66667,0 40,0 C 115,102.5 115,115 115,127.5 c 5,0 10,0 15,0 0,-12.5 0,-25 0,-37.500001 5,0 10,0 15,0 C 145,102.5 145,115 145,127.5 c 5,0 10,0 15,0 0,-12.5 0,-25 0,-37.500001 11.66667,0 23.33333,0 35,0 C 195,102.5 195,115 195,127.5 c 5,0 10,0 15,0 0,-17.5 0,-35.000001 0,-52.5 -16.66667,0 -33.33333,0 -50,0 0,-20.833333 0,-41.666667 0,-62.5 -5,0 -10,0 -15,0 0,20.833333 0,41.666667 0,62.5 -5,0 -10,0 -15,0 0,-20.833333 0,-41.666667 0,-62.5 -5,0 -10,0 -15,0 z m 75,2.5 c 11.66667,0 23.33333,0 35,0 0,10 0,20 0,30 -11.66667,0 -23.33333,0 -35,0 0,-10 0,-20 0,-30 z" />
+
+            </svg>
         </button>
-        <div style="display: flex; flex-direction: row;">
+        <div style="display: flex; flex-direction: row; gap: 0.5em">
             <button class="menuitem" onclick="renderForm('skills')">Tools and Languages</button>
             <button class="menuitem" onclick="renderForm('projects')">Projects</button>
-            <a class="menuitem" href="https://github.com/ejrsilver"><img class="menuitem"
-                    src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white"
-                    alt="GitHub"></a>
-            <a class="menuitem" href="https://linkedin.com/in/ejrsilver"><img class="menuitem"
-                    src="https://img.shields.io/badge/linkedin-black?style=for-the-badge&logo=linkedin&logoColor=white"
-                    alt="LinkedIn"></a>
+            <a class="menuitem" href="https://github.com/ejrsilver">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="30">
+                    <path
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                </svg>
+                <p>GitHub</p>
+            </a>
+            <a class="menuitem" href="https://linkedin.com/in/ejrsilver">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30">
+                    <path
+                        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                </svg>
+                <p>LinkedIn</p>
+            </a>
         </div>
     </div>
-    <div id="page-swappable-content">
-        <div class="container">
-            <h1>Hi There!</h1>
-            <p>My name is Ethan, and I'm a computer engineering student at Queen's University,
-                and a Software Developer at the Centre for Advanced Computing.</p>
-            <p>I work in web and application development, primarily as a backend engineer. I've worked in a variety of
-                languages for multiple platforms, and I'm comfortable working in a fast-paced environment. I also have
-                some experience in education and curriculum development working both in classrooms and online.</p>
+    <div id="page-swappable-content" class="container">
+        <div style="display: flex; flex-direction: row; gap: 1em">
+            <img class="profile" width="250"
+                src="https://avatars.githubusercontent.com/u/34197408?s=800&u=4db624b5e698ae289e85818551c33d52b1ea8abf"
+                alt="Profile Photo">
+            <div>
+                <h1>Hi There!</h1>
+                <p>My name is Ethan, and I'm a computer engineering student at Queen's University,
+                    and a Software Developer at the Centre for Advanced Computing.</p>
+                <p>I work in web and application development, primarily as a backend engineer. I've worked in a variety
+                    of
+                    languages for multiple platforms, and I'm comfortable working in a fast-paced environment. I also
+                    have
+                    some experience in education and curriculum development working both in classrooms and online.</p>
+            </div>
         </div>
-
-    </div>
-
-    <div id="hidden-content" style="opacity: 0;">
-        <div id="default" class="container">
-            <h1>Hi There!</h1>
-            <p>My name is Ethan, and I'm a computer engineering student at Queen's University,
-                and a Software Developer at the Centre for Advanced Computing.</p>
-            <p>I work in web and application development, primarily as a backend engineer. I've worked in a variety of
-                languages for multiple platforms, and I'm comfortable working in a fast-paced environment. I also have
-                some experience in education and curriculum development working both in classrooms and online.</p>
-        </div>
-
-        <div id="skills" class="container">
-            <h2>My Skillset</h2>
-            <h3>Languages</h3>
-
-            <p><img src="https://img.shields.io/badge/php-black?style=for-the-badge&logo=php" alt="PHP">
-                <img src="https://img.shields.io/badge/typescript-black?style=for-the-badge&logo=typescript"
-                    alt="TypeScript">
-                <img src="https://img.shields.io/badge/javascript-black?style=for-the-badge&logo=javascript"
-                    alt="JavaScript">
-                <img src="https://img.shields.io/badge/python-black?style=for-the-badge&logo=python" alt="Python">
-                <img src="https://img.shields.io/badge/sql-black?style=for-the-badge&logo=postgresql" alt="SQL">
-            </p>
-
-            <p><img src="https://img.shields.io/badge/C-black?style=for-the-badge&logo=c" alt="C">
-                <img src="https://img.shields.io/badge/C++-black?style=for-the-badge&logo=cplusplus" alt="C++">
-                <img src="https://img.shields.io/badge/rust-black?style=for-the-badge&logo=rust" alt="Rust">
-                <img src="https://img.shields.io/badge/Fortran-black?style=for-the-badge&logo=fortran" alt="Fortran">
-            </p>
-
-            <p><img src="https://img.shields.io/badge/Swift-black?style=for-the-badge&logo=swift" alt="Swift">
-                <img src="https://img.shields.io/badge/java-black?style=for-the-badge&logo=openjdk" alt="Java">
-                <img src="https://img.shields.io/badge/Dart-black?style=for-the-badge&logo=dart" alt="Dart">
-            </p>
-
-            <p><img src="https://img.shields.io/badge/Verilog-black?style=for-the-badge&logo=verilog" alt="Verilog">
-            </p>
-
-            <h3>Technologies</h3>
-
-            <p><img src="https://img.shields.io/badge/wordpress-black?style=for-the-badge&logo=wordpress"
-                    alt="WordPress">
-                <img src="https://img.shields.io/badge/django-black?style=for-the-badge&logo=django" alt="Django">
-                <img src="https://img.shields.io/badge/next.js-black?style=for-the-badge&logo=next.js" alt="NextJS">
-                <img src="https://img.shields.io/badge/react-black?style=for-the-badge&logo=react" alt="React">
-            </p>
-
-            <p><img src="https://img.shields.io/badge/React_Native-black?style=for-the-badge&logo=react" alt="React">
-                <img src="https://img.shields.io/badge/flutter-black?style=for-the-badge&logo=flutter" alt="Flutter">
-                <img src="https://img.shields.io/badge/SwiftUI-black?style=for-the-badge&logo=swift" alt="SwiftUI">
-            </p>
-
-            <p><img src="https://img.shields.io/badge/wxwidgets-black?style=for-the-badge&logo=wxwidgets"
-                    alt="WxWidgets">
-                <img src="https://img.shields.io/badge/swing-black?style=for-the-badge&logo=swing" alt="Swing">
-            </p>
-        </div>
-
-        <div id="projects" class="container">
-            <h2>Projects</h2>
-            <p>I created this <a href="https://dev.ejrsilver.com">accessible map
-                    application</a> using Next.js in Summer 2023.</p>
-            <p>Also using Next.js (using Create-T3-App), I recently created this <a
-                    href="https://qscc.ejrsilver.com">online education platform</a> for the Queen's Supercomputing Team.
-            </p>
-            <p>There's more to see on my <a href="https://github.com/ejrsilver">GitHub</a>.</p>
-        </div>
-
     </div>
 </body>
 

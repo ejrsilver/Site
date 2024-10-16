@@ -1,9 +1,23 @@
+:root {
+	--menu: #7F9172;
+	--menu-accent: #567568;
+	--menu-hover: #B49594;
+	--body-accent: #C9B1BD;
+	--background: #D5DFE5;
+	--menu-text: #D0D0D0;
+	--body-text: #567568;
+}
+
+img.profile {
+	border-radius: 50%;
+}
+
 body {
 	margin: 0;
 	font-size: 18px;
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #444;
-	color: whitesmoke;
+	background-color: var(--background);
+	color: var(--body-text);
 }
 
 a:link {
@@ -14,61 +28,42 @@ a:hover {
 	color: skyblue;
 }
 
-a:visited {
-	color: lightgrey;
-}
-
-.menuitem {
-	background: none;
-	border: none;
-	color: whitesmoke;
+p.menuitem,
+a.menuitem,
+button.menuitem {
+	color: var(--menu-text);
 	font-size: 1em;
-	padding-inline: 2em;
-	padding: 0.5em;
 	text-decoration-line: none;
 }
 
+.menuitem {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.5em;
+	background: var(--menu-accent);
+	border: none;
+	border-radius: 20pt;
+	margin: 0.5em;
+	padding-inline: 0.85em;
+	transition: 0.3s;
+}
+
+path {
+	fill: var(--menu-text);
+}
+
 .menuitem:hover {
-	background-color: #555;
+	background-color: var(--menu-hover);
 }
 
 .container {
-	padding-inline: 2em;
+	padding: 2em;
 }
 
 .menu {
 	display: flex;
 	justify-content: space-between;
-	background-color: #333;
-}
-
-@media screen and (prefers-color-scheme: light) {
-	.menu {
-		background-color: lightgrey;
-	}
-
-	.menuitem {
-		color: #444;
-	}
-
-	.menuitem:hover {
-		background-color: whitesmoke;
-	}
-
-	body {
-		color: #444;
-		background-color: whitesmoke;
-	}
-
-	a:link {
-		color: darkblue;
-	}
-
-	a:hover {
-		color: skyblue;
-	}
-
-	a:visited {
-		color: darkgrey;
-	}
+	background-color: var(--menu);
+	padding: 1em;
 }

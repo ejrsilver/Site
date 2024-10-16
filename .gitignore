@@ -2,3 +2,5 @@ ubuntu@192.18.156.179
 
 .DS_Store
 .env
+
+/vendor/
