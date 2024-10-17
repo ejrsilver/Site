@@ -1,39 +1,34 @@
 :root {
-	--menu: #7F9172;
-	--menu-accent: #567568;
-	--menu-hover: #B49594;
-	--body-accent: #C9B1BD;
+	--menu-background: #7F9172;
+	--menu-accent: #C9B1BD;
+	--menu-item-background: #567568;
+	--menu-item-hover: #B49594;
 	--background: #D5DFE5;
 	--menu-text: #D0D0D0;
+	--body-accent: #B49594;
+	--body-hover: #C9B1BD;
 	--body-text: #567568;
 }
 
 img.profile {
 	border-radius: 50%;
+	aspect-ratio: 1;
 }
 
 body {
 	margin: 0;
-	font-size: 18px;
+	font-size: 1em;
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: var(--background);
 	color: var(--body-text);
 }
 
-a:link {
-	color: lightblue;
+a {
+	color: var(--body-accent);
 }
 
 a:hover {
-	color: skyblue;
-}
-
-p.menuitem,
-a.menuitem,
-button.menuitem {
-	color: var(--menu-text);
-	font-size: 1em;
-	text-decoration-line: none;
+	color: var(--body-hover);
 }
 
 .menuitem {
@@ -41,29 +36,76 @@ button.menuitem {
 	flex-direction: row;
 	align-items: center;
 	gap: 0.5em;
-	background: var(--menu-accent);
+	background: var(--menu-item-background);
 	border: none;
-	border-radius: 20pt;
+	border-radius: 2em;
 	margin: 0.5em;
+	padding: 0.7em;
 	padding-inline: 0.85em;
 	transition: 0.3s;
 }
 
-path {
+.menuitem p {
+	flex: 0;
+	margin: 0;
+}
+
+a.menuitem,
+button.menuitem {
+	font-size: 1em;
+	text-decoration-line: none;
+	color: var(--menu-text);
+}
+
+.menuitem path {
 	fill: var(--menu-text);
 }
 
 .menuitem:hover {
-	background-color: var(--menu-hover);
+	background-color: var(--menu-item-hover);
 }
 
-.container {
+#page-swappable-content {
 	padding: 2em;
 }
 
-.menu {
+#main-menu {
 	display: flex;
 	justify-content: space-between;
-	background-color: var(--menu);
+	background-color: var(--menu-background);
 	padding: 1em;
+	border-bottom-color: var(--menu-accent);
+	border-bottom-width: 0.4em;
+	border-bottom-style: solid;
+}
+
+#main-profile-block {
+	display: flex;
+	flex-direction: row;
+	gap: 1em;
+}
+
+@keyframes shrink {
+	from {
+		width: 100%;
+		height: 100%;
+	}
+
+	to {
+		width: 0%;
+		height: 0%;
+	}
+}
+
+@media (max-width: 800px) {
+	.menuitem p {
+		display: none;
+	}
+
+	#main-profile-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1em;
+	}
 }
