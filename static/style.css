@@ -38,8 +38,7 @@ a:hover {
 	gap: 0.5em;
 	background: var(--menu-item-background);
 	border: none;
-	border-radius: 2em;
-	margin: 0.5em;
+	border-radius: 2.2em;
 	padding: 0.7em;
 	padding-inline: 0.85em;
 	transition: 0.3s;
@@ -74,9 +73,16 @@ button.menuitem {
 	justify-content: space-between;
 	background-color: var(--menu-background);
 	padding: 1em;
+	gap: 0.5em;
 	border-bottom-color: var(--menu-accent);
 	border-bottom-width: 0.4em;
 	border-bottom-style: solid;
+}
+
+#main-menu-links {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5em;
 }
 
 #main-profile-block {
